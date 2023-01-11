@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap");
+@keyframes color-change {
+  0% {
+    color: rgba(19, 71, 147, 1);
+  }
+
+  50% {
+    color: gold;
+  }
+  100% {
+    color: rgba(19, 71, 147, 1);
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: changa;
+}
+body {
+  background-color: black;
+}
+.button-ninja {
+  font-size: 24px;
+  text-decoration: none;
+  color: rgba(19, 71, 147, 255);
+  border-top: 2px solid rgba(19, 71, 147, 255);
+  border-bottom: 2px solid rgba(19, 71, 147, 255);
+  padding: 10px;
+  letter-spacing: 2px;
+  transition: all 1s;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/001/987/748/original/abstract-template-blue-geometric-diagonal-overlap-layer-on-dark-blue-background-free-vector.jpg");
+}
+.button-ninja:hover {
+  letter-spacing: 20px;
+  padding-left: 28px;
+  border-top: 2px solid gold;
+  border-bottom: 2px solid gold;
+  color: gold;
+  margin: 0px 50px;
+  opacity: 1;
+  background-image: url("https://media.istockphoto.com/id/1224381750/vector/abstract-diagonal-black-background-with-golden-lines-luxury-style.jpg?s=612x612&w=0&k=20&c=QrEPtyncMgcWUsyDdojaNLHvWT_qCUJ-OMa6pxAd_lM=");
+}
+
+/* Nav bar */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  width: 100%;
+  top: 0px;
+  padding: 50px 0px;
+  gap: 50px;
+}
+
+header img {
+  width: 300px;
+  transition: 1s;
+  opacity: 0.5;
+}
+
+.nav-list {
+  display: flex;
+  gap: 50px;
+}
+
+/* Header hover */
+
+header img:hover {
+  width: 670px;
+  opacity: 1 !important;
+}
+
+/* Header sticky function */
+
+header.sticky {
+  height: 50px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-bottom: 1px solid;
+  animation: color-change 10s infinite;
+}
+
+header.sticky img {
+  display: flex;
+  width: 80px;
+  opacity: 0.5;
+
+  align-items: center;
+}
+
+header.sticky a {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+/* Section one */
+
+.section-one {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  height: 500px;
+  width: 700px;
+  margin: 100px auto 0px;
+  border-top: solid;
+  border-bottom: solid;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  gap: 30px;
+  animation: color-change 10s infinite;
+}
+
+.section-one p {
+  animation: color-change 10s infinite;
+  font-size: 25px;
+}
+
+.login-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Section two */
+.section-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 800px;
+  border-top: solid 3px;
+  border-bottom: solid 3px;
+  animation: color-change 10s infinite;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: black 50px;
+  padding: 10px;
+  margin: 25px auto;
+}
+
+/* Section two video */
+
+.video-home {
+  height: 470px;
+  width: 1000px;
+  border: none;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid white;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+/* --------------- GAMES -------------- */
+/* Section one  */
+
+.section-one-games {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  border-top: solid 3px;
+  border-bottom: solid 3px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  animation: color-change 10s infinite;
+  width: 1300px;
+  padding: 20px;
+}
+
+.section-one-games img {
+  width: 300px;
+}
+
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+  border-bottom: solid 2px;
+  border-top: solid 2px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 5px 0;
+  position: relative;
+  height: 200px;
+  transition: all 1s;
+}
+
+.game h1 {
+  color: wheat;
+  font-size: 40px;
+}
+
+.game img {
+  position: absolute;
+  left: 35%;
+}
+
+.game:hover {
+  background-color: rgba(19, 70, 147, 0.204);
+}
+
+.options {
+  display: flex;
+  
+  gap: 10px;
+}
+
+.options a:hover {
+  letter-spacing: 4px;
+  display: flex;
+  justify-content: center;
+  padding-left: 12px;
+}
