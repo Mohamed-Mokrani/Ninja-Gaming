@@ -128,7 +128,7 @@ header.sticky a {
 }
 
 .section-one p {
-  animation: color-change 10s infinite;
+  color: rgb(216, 216, 255);
   font-size: 25px;
 }
 
@@ -198,14 +198,18 @@ footer {
 }
 
 .section-one-games img {
+  transition: all 1s;
+  height: 170px;
   width: 300px;
+  border-radius: 10px;
+  filter: grayscale(100%);
 }
 
 .game {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0px;
+  padding: 20px 10px;
   border-bottom: solid 2px;
   border-top: solid 2px;
   border-top-left-radius: 20px;
@@ -214,10 +218,32 @@ footer {
   border-bottom-left-radius: 0px;
   border-color: rgba(19, 71, 147, 255);
   margin: 5px 0;
-  position: relative;
+  padding: 10px 20px;
   height: 200px;
   transition: all 1s;
   background-image: url("https://static.vecteezy.com/system/resources/previews/001/987/748/original/abstract-template-blue-geometric-diagonal-overlap-layer-on-dark-blue-background-free-vector.jpg");
+}
+.first-div {
+  width: 300px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  
+
+}
+.image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 320px;
+  align-items: flex-end;
+  
 }
 
 .game:hover {
@@ -227,30 +253,28 @@ footer {
   border-bottom-left-radius: 20px;
   border-color: gold;
   background-image: url("https://media.istockphoto.com/id/1224381750/vector/abstract-diagonal-black-background-with-golden-lines-luxury-style.jpg?s=612x612&w=0&k=20&c=QrEPtyncMgcWUsyDdojaNLHvWT_qCUJ-OMa6pxAd_lM=");
+  padding: 5px;
 }
 
-.game h1 {
-  color: wheat;
-  font-size: 40px;
-}
 
-.game img {
-  position: absolute;
-  left: 35%;
-  height: 190px;
-}
 
-.options {
-  display: flex;
 
-  gap: 10px;
-}
 
 .options a {
   padding: 8px;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .options a:hover {
-  letter-spacing: 6px;
-  padding-left: 17px;
+  letter-spacing: 5px;
+  padding-left: 7px;
+  margin: 0;
 }
+
+
+
+
