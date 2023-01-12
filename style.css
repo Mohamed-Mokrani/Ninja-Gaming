@@ -193,16 +193,8 @@ footer {
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
   animation: color-change 10s infinite;
-  width: 1300px;
+  width: 1400px;
   padding: 20px;
-}
-
-.section-one-games img {
-  transition: all 1s;
-  height: 170px;
-  width: 300px;
-  border-radius: 10px;
-  filter: grayscale(100%);
 }
 
 .game {
@@ -222,20 +214,25 @@ footer {
   height: 200px;
   transition: all 1s;
   background-image: url("https://static.vecteezy.com/system/resources/previews/001/987/748/original/abstract-template-blue-geometric-diagonal-overlap-layer-on-dark-blue-background-free-vector.jpg");
+  font-size: 20px;
 }
 .first-div {
   width: 300px;
   text-align: center;
   color: white;
-  font-size: 24px;
   
-
 }
 .image-div {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+}
+.game img {
+  transition: all 1s;
+  height: 170px;
+  width: 300px;
+  border-radius: 10px;
+  filter: grayscale(100%);
 }
 .options {
   display: flex;
@@ -243,7 +240,6 @@ footer {
   gap: 10px;
   width: 320px;
   align-items: flex-end;
-  
 }
 
 .game:hover {
@@ -255,11 +251,9 @@ footer {
   background-image: url("https://media.istockphoto.com/id/1224381750/vector/abstract-diagonal-black-background-with-golden-lines-luxury-style.jpg?s=612x612&w=0&k=20&c=QrEPtyncMgcWUsyDdojaNLHvWT_qCUJ-OMa6pxAd_lM=");
   padding: 5px;
 }
-
-
-
-
-
+.options{
+  transition: all 1s;
+}
 .options a {
   padding: 8px;
   width: 200px;
@@ -267,6 +261,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .options a:hover {
@@ -274,7 +269,3 @@ footer {
   padding-left: 7px;
   margin: 0;
 }
-
-
-
-
