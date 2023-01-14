@@ -23,6 +23,7 @@ body {
  background-size: cover;
  
  
+ 
 
 
 }
@@ -58,7 +59,7 @@ body {
 }
 
 /* Nav bar */
-header {
+header { 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,6 +89,8 @@ header img:hover {
 }
 
 /* Header sticky function */
+
+
 
 header.sticky {
   height: 50px;
@@ -296,5 +299,23 @@ footer {
   
   
  border-radius : 0px;
+}
+
+/* Login page */
+
+.login-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px white solid;
+  border-bottom: 3px white solid;
+  
 }
 

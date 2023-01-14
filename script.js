@@ -22,9 +22,9 @@ for (let i = 0; i < links.length; i++) {
 }
 
 // games
-const imageDiv = document.getElementsByClassName("image-game");
-const game = document.getElementsByClassName("game");
-const options = document.getElementsByClassName("options");
+const imageDiv = document.querySelectorAll(".image-game");
+const game = document.querySelectorAll(".game");
+const options = document.querySelectorAll(".options");
 for (let i = 0; i < game.length; i++) {
   game[i].addEventListener("mouseenter", function () {
     imageDiv[i].style.filter = "none";
@@ -49,33 +49,61 @@ for (let i = 0; i < game.length; i++) {
 // Home link
 
 const sectionGames = document.querySelector(".section-one-games");
-const sectionHome = document.querySelector(".section-home");
+const sectionHomeId = document.querySelector("#home-id");
 
+// function changeBodyHome(url) {
+//   fetch(url)
+//     .then((response) => response.text())
+//     .then((data) => {
+//       let parser = new DOMParser();
+//       let doc = parser.parseFromString(data, "text/html");
 
-function changeBody(url) {
-  fetch(url)
-    .then(response => response.text())
-    .then(data => {
-      sectionHome.innerHTML = data;
-    });
-}
+//       sectionHomeId.innerHTML = sectionHomeId.innerHTML;
 
-document.querySelector('#home-page').addEventListener('click', function() {
-  changeBody('home.html');
-});
+//     });
+// }
+
+// document.querySelector("#nlogout").addEventListener("click", function () {
+//   changeLogin("login.html");
+// });
 
 // Game link
 
-
-
-function changeBody(url) {
+function changeBodyGames(url) {
   fetch(url)
-    .then(response => response.text())
-    .then(data => {
-      sectionHome.innerHTML = data;
+    .then((response) => response.text())
+    .then((data) => {
+      let parser = new DOMParser();
+      let doc = parser.parseFromString(data, "text/html");
+      let sectionOneGames = doc.querySelector(".section-one-games");
+      sectionHomeId.innerHTML = sectionOneGames.innerHTML;
+      sectionHomeId.className = "section-one-games";
+      const imageDiv = document.querySelectorAll(".image-game");
+      const game = document.querySelectorAll(".game");
+      const options = document.querySelectorAll(".options");
+      for (let i = 0; i < game.length; i++) {
+        game[i].addEventListener("mouseenter", function () {
+          imageDiv[i].style.filter = "none";
+          imageDiv[i].style.width = "400px";
+          imageDiv[i].style.height = "240px";
+          game[i].style.height = "260px";
+          options[i].style.gap = "30px";
+          game[i].style.fontSize = "30px";
+          imageDiv[i].style.borderRadius = "0px";
+        });
+
+        game[i].addEventListener("mouseleave", function () {
+          imageDiv[i].style.filter = "grayscale(100%)";
+          imageDiv[i].style.width = "300px";
+          imageDiv[i].style.height = "170px";
+          game[i].style.height = "200px";
+          options[i].style.gap = "10px";
+          game[i].style.fontSize = "20px";
+          imageDiv[i].style.borderRadius = "50px";
+        });
+      }
     });
 }
-
-document.querySelector('#ninja-games').addEventListener('click', function() {
-  changeBody('games.html');
+document.querySelector("#ninja-games").addEventListener("click", function () {
+  changeBodyGames("games.html");
 });
