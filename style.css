@@ -20,12 +20,7 @@
 }
 body {
   background-image: linear-gradient(black, rgb(9, 0, 34));
- background-size: cover;
- 
- 
- 
-
-
+  background-size: cover;
 }
 .button-ninja {
   font-size: 24px;
@@ -35,7 +30,7 @@ body {
   border-bottom: 2px solid rgba(19, 71, 147, 255);
   padding: 10px;
   letter-spacing: 2px;
-  transition:  1000ms;
+  transition: 1000ms;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background-image: url("https://static.vecteezy.com/system/resources/previews/001/987/748/original/abstract-template-blue-geometric-diagonal-overlap-layer-on-dark-blue-background-free-vector.jpg");
@@ -58,8 +53,8 @@ body {
   background-size: cover;
 }
 
-/* Nav bar */
-header { 
+/* Header */
+header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,6 +76,34 @@ header img {
   gap: 50px;
 }
 
+.nav-list button:last-child {
+  display: none;
+}
+
+.header-vids {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: solid;
+  border-bottom: solid;
+  background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX26341488.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+header iframe {
+  width: 50px;
+  height: 50px;
+
+  transition: 1000ms;
+  filter: opacity(0%);
+  -webkit-filter: opacity(0%);
+  -moz-filter: opacity(0%);
+}
+
 /* Header hover */
 
 header img:hover {
@@ -89,8 +112,6 @@ header img:hover {
 }
 
 /* Header sticky function */
-
-
 
 header.sticky {
   height: 50px;
@@ -101,14 +122,13 @@ header.sticky {
   padding: 0 10px;
   border-bottom: 1px solid;
   border-color: rgba(19, 71, 147, 255);
-  margin-bottom: 100px ;
+  margin-bottom: 100px;
 }
 
 header.sticky img {
   display: flex;
   width: 80px;
   opacity: 0.5;
-
   align-items: center;
 }
 
@@ -118,10 +138,11 @@ header.sticky button {
   justify-content: center;
   align-items: center;
   font-size: 20px;
-
 }
 
-
+header.sticky .header-vids {
+  display: none;
+}
 
 /* Section one */
 
@@ -140,9 +161,7 @@ header.sticky button {
   border-bottom-right-radius: 10px;
   gap: 30px;
   border-color: rgba(19, 71, 147, 255);
-  
 }
-
 
 .section-one p {
   color: rgb(216, 216, 255);
@@ -179,7 +198,6 @@ header.sticky button {
   height: 470px;
   width: 1000px;
   border: none;
-
 }
 
 /* Footer */
@@ -230,7 +248,7 @@ footer {
   margin: 5px 0;
   padding: 10px 20px;
   height: 200px;
-  transition:  1000ms;
+  transition: 1000ms;
   background-image: url("https://static.vecteezy.com/system/resources/previews/001/987/748/original/abstract-template-blue-geometric-diagonal-overlap-layer-on-dark-blue-background-free-vector.jpg");
   font-size: 20px;
 }
@@ -238,7 +256,6 @@ footer {
   width: 300px;
   text-align: center;
   color: white;
-  
 }
 .image-div {
   display: flex;
@@ -246,7 +263,7 @@ footer {
   align-items: center;
 }
 .game img {
-  transition:  1000ms;
+  transition: 1000ms;
   height: 170px;
   width: 300px;
   border-radius: 50px;
@@ -258,6 +275,7 @@ footer {
   gap: 10px;
   width: 320px;
   align-items: flex-end;
+  transition: 1000ms;
 }
 
 .game:hover {
@@ -268,12 +286,9 @@ footer {
   border-color: gold;
   background-image: url("https://media.istockphoto.com/id/1224381750/vector/abstract-diagonal-black-background-with-golden-lines-luxury-style.jpg?s=612x612&w=0&k=20&c=QrEPtyncMgcWUsyDdojaNLHvWT_qCUJ-OMa6pxAd_lM=");
 
-  
   padding: 5px;
 }
-.options{
-  transition:  1000ms;
-}
+
 .options button {
   padding: 8px;
   width: 200px;
@@ -281,41 +296,66 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .options button:hover {
   letter-spacing: 5px;
   padding-left: 7px;
   margin: 0;
+  width: 250px;
 }
 
+.image-game.img-on {
+  filter: none;
+  width: 400px;
+  height: 240p;
+  height: 260px;
 
-.image-game.img-on{
-  filter : none;
-  width : 400px;
-  height : 240p;
-  height : 260px;
-  
-  
- border-radius : 0px;
+  border-radius: 0px;
 }
 
 /* Login page */
 
-.login-body{
+.login-body {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.login-container{
+.login-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-top: 3px white solid;
   border-bottom: 3px white solid;
-  
+  border-top-left-radius: 10px ;
+  border-bottom-right-radius: 10px;
+  border-color: rgba(19, 71, 147, 1);;
+  width: 500px;
+  height: 500px;
+  color: white;
+  font-size: 20px;
+  gap: 50px;
 }
 
+.login-column {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+.bouton-login {
+width: 200px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
