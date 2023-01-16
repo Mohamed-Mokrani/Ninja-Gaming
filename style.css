@@ -11,6 +11,23 @@
     color: rgba(19, 71, 147, 1);
   }
 }
+@keyframes example {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 * {
   margin: 0px;
@@ -19,8 +36,9 @@
   font-family: changa;
 }
 body {
-  background-image: linear-gradient(black, rgb(9, 0, 34));
-  background-size: cover;
+  
+  animation: example 100000ms infinite linear;
+  background-image: url("https://lukedowding.com/wp-content/uploads/stars.jpg");
 }
 .button-ninja {
   font-size: 24px;
@@ -76,7 +94,15 @@ header img {
   gap: 50px;
 }
 
-.nav-list button:last-child {
+#my-profile,
+#logout {
+  display: none;
+}
+
+#ninja-games{
+  display: none;
+}
+#home-btn{
   display: none;
 }
 
@@ -89,15 +115,17 @@ header img {
   background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX26341488.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   width: 50px;
   height: 50px;
+  border: 3px solid;
+  border-radius: 50%;
+  animation: color-change 2s infinite;
 }
 
 header iframe {
   width: 50px;
   height: 50px;
-
   transition: 1000ms;
   filter: opacity(0%);
   -webkit-filter: opacity(0%);
@@ -208,6 +236,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  background-color: black;
 }
 
 .footer-logos {
@@ -320,6 +349,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 600px;
 }
 
 .login-container {
@@ -327,16 +357,39 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 3px white solid;
-  border-bottom: 3px white solid;
-  border-top-left-radius: 10px ;
-  border-bottom-right-radius: 10px;
-  border-color: rgba(19, 71, 147, 1);;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-color: rgba(19, 71, 147, 1);
   width: 500px;
   height: 500px;
   color: white;
   font-size: 20px;
   gap: 50px;
+  transition: 1000ms;
+  background-image: url("https://t3.ftcdn.net/jpg/02/06/43/08/360_F_206430824_OKOZeTETJoK7U7zadGljy7GB6q4MZdPo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.login-container:hover {
+  border-top: 3px gold solid;
+  border-bottom: 3px gold solid;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-color: gold(19, 71, 147, 1);
+  width: 550px;
+  height: 550px;
+  color: white;
+  font-size: 25px;
+  gap: 50px;
+  background-image: url("https://t4.ftcdn.net/jpg/02/26/68/49/360_F_226684997_B70B2bB21Wk2ch12kAV0cqjNlTpX9fdB.jpg");
+  background-size: cover;
 }
 
 .login-column {
@@ -353,9 +406,92 @@ footer {
   width: 500px;
 }
 .bouton-login {
-width: 200px;
-height: 50px;
-display: flex;
-justify-content: center;
-align-items: center;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* Profile */
+.section-profile {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  height: 200px;
+  width: 1400px;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/001/987/748/original/abstract-template-blue-geometric-diagonal-overlap-layer-on-dark-blue-background-free-vector.jpg");
+  border-top: solid 3px rgba(19, 71, 147, 1);
+  border-bottom: solid 3px rgba(19, 71, 147, 1);
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 0 20px;
+  transition: all 1000ms;
+}
+
+.profile h1 {
+  font-size: 40px;
+  color: white;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+}
+
+.profile:hover {
+  height: 250px;
+  width: 1500px;
+  background-image: url("https://media.istockphoto.com/id/1224381750/vector/abstract-diagonal-black-background-with-golden-lines-luxury-style.jpg?s=612x612&w=0&k=20&c=QrEPtyncMgcWUsyDdojaNLHvWT_qCUJ-OMa6pxAd_lM=");
+  border-top: solid 3px gold;
+  border-bottom: solid 3px gold;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+
+.description
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 1300px;
+  color: white;
+  letter-spacing: 10px;
+  font-size: 25px;
+  
+  background-image: url("https://static.vecteezy.com/system/resources/previews/001/987/748/original/abstract-template-blue-geometric-diagonal-overlap-layer-on-dark-blue-background-free-vector.jpg");
+  border-top: solid 3px rgba(19, 71, 147, 1);
+  border-bottom: solid 3px rgba(19, 71, 147, 1);
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 0 20px;
+  transition: all 1000ms;
+}
+
+.description:hover {
+  height: 350px;
+  width: 1350px;
+  background-image: url("https://media.istockphoto.com/id/1224381750/vector/abstract-diagonal-black-background-with-golden-lines-luxury-style.jpg?s=612x612&w=0&k=20&c=QrEPtyncMgcWUsyDdojaNLHvWT_qCUJ-OMa6pxAd_lM=");
+  border-top: solid 3px gold;
+  border-bottom: solid 3px gold;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+
