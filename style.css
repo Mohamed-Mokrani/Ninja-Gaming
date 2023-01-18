@@ -98,12 +98,11 @@ header img {
   display: none;
 }
 
-#ninja-games {
+/* .button-ninja.buy {
   display: none;
-}
-#home-btn {
-  display: none;
-}
+   */
+
+
 
 .header-vids {
   display: flex;

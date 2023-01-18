@@ -1,11 +1,12 @@
-// Header scroll
+// Header scroll-------------------------------------------------------------------------------------
 let header = document.querySelector("header");
 window.addEventListener("scroll", function () {
   header.classList.toggle("sticky", window.scrollY > 1);
   document.querySelectorAll(".header.vids").style.display = "none";
 });
 
-// Header image opacity
+// Header image opacity----------------------------------------------------------------------------------------------
+const sectionHomeId = document.querySelector("#home-id");
 let links = document.querySelectorAll("button");
 let image = document.getElementById("header-image");
 function increaseOpacity() {
@@ -18,11 +19,8 @@ for (let i = 0; i < links.length; i++) {
   links[i].addEventListener("mouseenter", increaseOpacity);
   links[i].addEventListener("mouseleave", decreaseOpacity);
 }
-// games
 
-const sectionHomeId = document.querySelector("#home-id");
-
-// Login link
+// Login link -------------------------------------------------------------------------------------------------------------------------
 function loginButton() {
   document.querySelector("#logout").style.display = "flex";
   document.querySelector("#logout").style.alignItems = "center";
@@ -41,7 +39,7 @@ function loginButton() {
     });
 }
 
-// login page link
+// login page link-.....................................................................................................................-----------
 function login() {
   fetch("login.html")
     .then((response) => response.text())
@@ -57,10 +55,10 @@ function login() {
     });
   document.querySelector("#home-btn").style.display = "flex";
 }
-
 document.getElementById("login-button").addEventListener("click", login);
 
-// Home link
+// Home link.........................................................................................................................
+
 document.getElementById("home-btn").addEventListener("click", function () {
   fetch("home.html")
     .then((response) => response.text())
@@ -73,11 +71,15 @@ document.getElementById("home-btn").addEventListener("click", function () {
       document.getElementById("login-button").addEventListener("click", login);
     });
 });
-// Game link
+
+// Game link..........................................................................................................................
 
 const imageDiv = document.querySelectorAll(".image-game");
 const game = document.querySelectorAll(".game");
 const options = document.querySelectorAll(".options");
+
+  
+
 
 function changeBodyGames(url) {
   fetch(url)
@@ -88,6 +90,7 @@ function changeBodyGames(url) {
       let sectionOneGames = doc.querySelector(".section-one-games");
       sectionHomeId.innerHTML = sectionOneGames.innerHTML;
       sectionHomeId.className = "section-one-games";
+
       const imageDiv = document.querySelectorAll(".image-game");
       const game = document.querySelectorAll(".game");
       const options = document.querySelectorAll(".options");
@@ -127,6 +130,9 @@ function changeBodyGames(url) {
           [i].addEventListener("click", function () {
             document.querySelectorAll(".buy")[i].style.display = "none";
             document.querySelectorAll(".start")[i].style.display = "flex";
+            var buttons = document.querySelectorAll(".buy");
+            var div = this.parentNode.parentNode;
+            div.parentNode.insertBefore(div, div.parentNode.firstChild);
           });
 
         function gamesStyleOn() {
@@ -160,9 +166,10 @@ function changeBodyGames(url) {
 }
 
 document.querySelector("#ninja-games").addEventListener("click", function () {
+  
   changeBodyGames("games.html");
 });
-// Profile button
+// Profile button.....................................................................................................................
 document.getElementById("my-profile").addEventListener("click", function () {
   fetch("profile.html")
     .then((response) => response.text())
@@ -175,13 +182,12 @@ document.getElementById("my-profile").addEventListener("click", function () {
     });
 });
 
-// Logout button
+// Logout button.....................................................................................................................
 
 document.querySelector("#logout").addEventListener("click", function () {
   document.querySelector("#logout").style.display = "none";
   document.querySelector("#my-profile").style.display = "none";
-  document.querySelector("#ninja-games").style.display = "none";
+  document.querySelector("#ninja-games").style.display = "flex";
   document.querySelector("#home-btn").style.display = "flex";
 });
 document.getElementById("logout").addEventListener("click", login);
-
