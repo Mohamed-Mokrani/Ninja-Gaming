@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="style.css" />
@@ -8,7 +9,9 @@
     <title>Document</title>
   </head>
   <body>
-    <section  class="section-one-games">
+    
+    <section class="section-one-games">
+      <section id="security-box" class="security"></section>
       <div class="game">
         <div class="first-div">
           <h1>VALORANT</h1>
@@ -19,11 +22,18 @@
             alt="error"
             class="image-game"
           />
+          <iframe
+            class="trailer-video"
+            src="https://www.youtube.com/embed/e_E9W2vsRbQ"
+            title="DUELLISTES // Cinématique officielle du lancement de VALORANT"
+            allowfullscreen
+          ></iframe>
         </div>
         <div class="options">
-          <button  class="button-ninja">Trailer</button>
-          <button class="button-ninja">Add to cart</button>
-          <button class="button-ninja">Start</button>
+          <button class="button-ninja trailer">Trailer</button>
+          <button class="button-ninja stop">Stop</button>
+          <button class="button-ninja start">Start</button>
+          <button class="button-ninja buy" data-toggle="modal" data-target="#modal">Buy</button>
         </div>
       </div>
 
@@ -37,11 +47,19 @@
             alt="error"
             class="image-game"
           />
+          <iframe
+            class="trailer-video"
+            src="https://www.youtube.com/embed/o3V-GvvzjE4"
+            title="Trailer de présentation FIFA 23| The World’s Game (Le Jeu Universel)"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
         <div class="options">
-          <button  class="button-ninja">Trailer</button>
-          <button class="button-ninja">Add to cart</button>
-          <button class="button-ninja">Start</button>
+          <button class="button-ninja trailer">Trailer</button>
+          <button class="button-ninja stop">Stop</button>
+          <button class="button-ninja start">Start</button>
+          <button class="button-ninja buy" data-toggle="modal" data-target="#modal">Buy</button>
         </div>
       </div>
 
@@ -55,11 +73,21 @@
             alt="error"
             class="image-game"
           />
+          <iframe
+            class="trailer-video"
+            width="885"
+            height="498"
+            src="https://www.youtube.com/embed/XXYxZySYeFU"
+            title="Fortnite Chapter 4 Season 1 Launch Trailer"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
         <div class="options">
-          <button  class="button-ninja">Trailer</button>
-          <button class="button-ninja">Add to cart</button>
-          <button class="button-ninja">Start</button>
+          <button class="button-ninja trailer">Trailer</button>
+          <button class="button-ninja stop">Stop</button>
+          <button class="button-ninja start">Start</button>
+          <button class="button-ninja buy" data-toggle="modal" data-target="#modal">Buy</button>
         </div>
       </div>
 
@@ -73,11 +101,19 @@
             alt="error"
             class="image-game"
           />
+          <iframe
+            class="trailer-video"
+            src="https://www.youtube.com/embed/r72GP1PIZa0"
+            title="Call of Duty: Modern Warfare II - World Gameplay Reveal Trailer"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
         <div class="options">
-          <button  class="button-ninja">Trailer</button>
-          <button class="button-ninja">Add to cart</button>
-          <button class="button-ninja">Start</button>
+          <button class="button-ninja trailer">Trailer</button>
+          <button class="button-ninja stop">Stop</button>
+          <button class="button-ninja start">Start</button>
+          <button class="button-ninja buy" data-toggle="modal" data-target="#modal">Buy</button>
         </div>
       </div>
 
@@ -91,14 +127,55 @@
             alt="error"
             class="image-game"
           />
+          <iframe
+            class="trailer-video"
+            src="https://www.youtube.com/embed/u1oqfdh4xBY"
+            title="PUBG: BATTLEGROUNDS Cinematic trailer | PUBG"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
         <div class="options">
-          <button  class="button-ninja">Trailer</button>
-          <button class="button-ninja">Add to cart</button>
-          <button class="button-ninja">Start</button>
+          <button class="button-ninja trailer">Trailer</button>
+          <button class="button-ninja stop">Stop</button>
+          <button class="button-ninja start">Start</button>
+          <button class="button-ninja buy" data-toggle="modal" data-target="#modal">Buy</button>
         </div>
       </div>
+       <!-- Modal -->
+     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">VISA CARD Informations</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <label for="card-number">Card Number:</label>
+              <input type="text" id="card-number" class="form-control">
+              <br>
+              <label for="password">Password:</label>
+              <input type="password" id="password" class="form-control">
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="button-ninja" data-dismiss="modal">Apply</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- declaration  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Fin modal -->
     </section>
+    
+    
     <script src="script.js"></script>
   </body>
 </html>

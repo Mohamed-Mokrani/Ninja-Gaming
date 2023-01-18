@@ -36,7 +36,6 @@
   font-family: changa;
 }
 body {
-  
   animation: example 100000ms infinite linear;
   background-image: url("https://lukedowding.com/wp-content/uploads/stars.jpg");
 }
@@ -66,7 +65,7 @@ body {
   border-bottom-left-radius: 20px;
   color: gold;
   margin: 0px 50px;
-  opacity: 1;
+
   background-image: url("https://media.istockphoto.com/id/1224381750/vector/abstract-diagonal-black-background-with-golden-lines-luxury-style.jpg?s=612x612&w=0&k=20&c=QrEPtyncMgcWUsyDdojaNLHvWT_qCUJ-OMa6pxAd_lM=");
   background-size: cover;
 }
@@ -99,10 +98,10 @@ header img {
   display: none;
 }
 
-#ninja-games{
+#ninja-games {
   display: none;
 }
-#home-btn{
+#home-btn {
   display: none;
 }
 
@@ -151,6 +150,7 @@ header.sticky {
   border-bottom: 1px solid;
   border-color: rgba(19, 71, 147, 255);
   margin-bottom: 100px;
+  z-index: 1;
 }
 
 header.sticky img {
@@ -298,6 +298,23 @@ footer {
   border-radius: 50px;
   filter: grayscale(100%);
 }
+.game iframe {
+  transition: 1000ms;
+  height: 170px;
+  width: 300px;
+  border: none;
+  filter: grayscale(100%);
+  display: none;
+  filter: none !important;
+}
+
+.button-ninja.stop {
+  display: none;
+}
+
+.button-ninja.start {
+  display: none;
+}
 .options {
   display: flex;
   flex-direction: column;
@@ -386,7 +403,7 @@ footer {
   width: 550px;
   height: 550px;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
   gap: 50px;
   background-image: url("https://t4.ftcdn.net/jpg/02/26/68/49/360_F_226684997_B70B2bB21Wk2ch12kAV0cqjNlTpX9fdB.jpg");
   background-size: cover;
@@ -427,7 +444,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   height: 200px;
   width: 1400px;
   background-image: url("https://static.vecteezy.com/system/resources/previews/001/987/748/original/abstract-template-blue-geometric-diagonal-overlap-layer-on-dark-blue-background-free-vector.jpg");
@@ -461,9 +478,7 @@ footer {
   border-bottom-left-radius: 20px;
 }
 
-
-.description
-{
+.description {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -472,7 +487,7 @@ footer {
   color: white;
   letter-spacing: 10px;
   font-size: 25px;
-  
+
   background-image: url("https://static.vecteezy.com/system/resources/previews/001/987/748/original/abstract-template-blue-geometric-diagonal-overlap-layer-on-dark-blue-background-free-vector.jpg");
   border-top: solid 3px rgba(19, 71, 147, 1);
   border-bottom: solid 3px rgba(19, 71, 147, 1);
@@ -494,4 +509,39 @@ footer {
   border-bottom-left-radius: 20px;
 }
 
+.authentification {
+  background-color: red;
+  width: 500px;
+  height: 200px;
+}
 
+.modal-body {
+  background-color: black;
+}
+
+.modal-content {
+  background-color: black;
+  color: white;
+}
+
+.modal-dialog {
+  margin-top: 100px;
+  border-top: solid 3px rgba(19, 71, 147, 1);
+  border-bottom: solid 3px rgba(19, 71, 147, 1);
+}
+
+.modal-dialog:hover {
+  border-top: solid 3px gold;
+  border-bottom: solid 3px gold;
+}
+
+.start {
+  background-image: url("https://media.istockphoto.com/id/1323860984/vector/green-background-in-vector-illustration-with-glow-and-lights.jpg?s=612x612&w=0&k=20&c=8IJexeaZOCxSRrNiCCgUvB-dexsy8w9PEF1IF8v4skU=");
+  border-top: 3px solid green;
+  border-bottom: 3px solid green;
+}
+
+.start:hover {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/001/589/630/original/green-background-with-fading-square-and-dots-free-vector.jpg");
+  color: white;
+}

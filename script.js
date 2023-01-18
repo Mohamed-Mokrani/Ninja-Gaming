@@ -19,33 +19,7 @@ for (let i = 0; i < links.length; i++) {
   links[i].addEventListener("mouseleave", decreaseOpacity);
 }
 // games
-const imageDiv = document.querySelectorAll(".image-game");
-const game = document.querySelectorAll(".game");
-const options = document.querySelectorAll(".options");
 
-for (let i = 0; i < game.length; i++) {
-  function gamesStyleOn() {
-    imageDiv[i].style.filter = "none";
-    imageDiv[i].style.width = "400px";
-    imageDiv[i].style.height = "240px";
-    game[i].style.height = "260px";
-    options[i].style.gap = "30px";
-    game[i].style.fontSize = "30px";
-    imageDiv[i].style.borderRadius = "0px";
-  }
-
-  function gamesStyleOff() {
-    imageDiv[i].style.filter = "grayscale(100%)";
-    imageDiv[i].style.width = "300px";
-    imageDiv[i].style.height = "170px";
-    game[i].style.height = "200px";
-    options[i].style.gap = "10px";
-    game[i].style.fontSize = "20px";
-    imageDiv[i].style.borderRadius = "50px";
-  }
-  game[i].addEventListener("mouseenter", gamesStyleOn);
-  game[i].addEventListener("mouseleave", gamesStyleOff);
-}
 const sectionHomeId = document.querySelector("#home-id");
 
 // Login link
@@ -81,7 +55,7 @@ function login() {
         .querySelector("#login-button")
         .addEventListener("click", loginButton);
     });
-    document.querySelector("#home-btn").style.display="flex";
+  document.querySelector("#home-btn").style.display = "flex";
 }
 
 document.getElementById("login-button").addEventListener("click", login);
@@ -101,6 +75,10 @@ document.getElementById("home-btn").addEventListener("click", function () {
 });
 // Game link
 
+const imageDiv = document.querySelectorAll(".image-game");
+const game = document.querySelectorAll(".game");
+const options = document.querySelectorAll(".options");
+
 function changeBodyGames(url) {
   fetch(url)
     .then((response) => response.text())
@@ -115,10 +93,48 @@ function changeBodyGames(url) {
       const options = document.querySelectorAll(".options");
 
       for (let i = 0; i < game.length; i++) {
+        document
+          .querySelectorAll(".trailer")
+          [i].addEventListener("click", function () {
+            document.querySelectorAll(".image-game")[i].style.display = "none";
+            document.querySelectorAll(".trailer-video")[i].style.display =
+              "flex";
+            document.querySelectorAll(".image-div")[i].style.filter = "none";
+            document.querySelectorAll(".game")[i].style.height = "420px";
+            document.querySelectorAll(".button-ninja.stop")[i].style.display =
+              "flex";
+            document.querySelectorAll(".trailer")[i].style.display = "none";
+            document.querySelectorAll(".trailer-video")[i].style.height =
+              "400px";
+            document.querySelectorAll(".trailer-video")[i].style.width =
+              "700px";
+          });
+
+        document
+          .querySelectorAll(".stop")
+          [i].addEventListener("click", function () {
+            document.querySelectorAll(".image-game")[i].style.display = "flex";
+            document.querySelectorAll(".trailer-video")[i].style.display =
+              "none";
+            document.querySelectorAll(".button-ninja.stop")[i].style.display =
+              "none";
+            document.querySelectorAll(".trailer")[i].style.display = "flex";
+            document.querySelectorAll(".game")[i].style.height = "260px";
+          });
+
+        document
+          .querySelectorAll(".buy")
+          [i].addEventListener("click", function () {
+            document.querySelectorAll(".buy")[i].style.display = "none";
+            document.querySelectorAll(".start")[i].style.display = "flex";
+          });
+
         function gamesStyleOn() {
           imageDiv[i].style.filter = "none";
           imageDiv[i].style.width = "400px";
           imageDiv[i].style.height = "240px";
+          document.querySelectorAll(".trailer-video")[i].style.width = "400px";
+          document.querySelectorAll(".trailer-video")[i].style.height = "240px";
           game[i].style.height = "260px";
           options[i].style.gap = "30px";
           game[i].style.fontSize = "30px";
@@ -129,11 +145,14 @@ function changeBodyGames(url) {
           imageDiv[i].style.filter = "grayscale(100%)";
           imageDiv[i].style.width = "300px";
           imageDiv[i].style.height = "170px";
+          document.querySelectorAll(".trailer-video")[i].style.width = "300px";
+          document.querySelectorAll(".trailer-video")[i].style.height = "170px";
           game[i].style.height = "200px";
           options[i].style.gap = "10px";
           game[i].style.fontSize = "20px";
           imageDiv[i].style.borderRadius = "50px";
         }
+
         game[i].addEventListener("mouseenter", gamesStyleOn);
         game[i].addEventListener("mouseleave", gamesStyleOff);
       }
@@ -165,3 +184,4 @@ document.querySelector("#logout").addEventListener("click", function () {
   document.querySelector("#home-btn").style.display = "flex";
 });
 document.getElementById("logout").addEventListener("click", login);
+
